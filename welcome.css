@@ -1,0 +1,98 @@
+/* General body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Main container */
+.container {
+  background-color: #ffffffcc;
+  backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Header styling */
+h1 {
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+}
+
+/* Input styling */
+input[type="text"] {
+  width: 100%;
+  padding: 12px 18px;
+  margin: 12px 0;
+  font-size: 1rem;
+  border: 2px solid #2196F3;
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 10px rgba(33, 150, 243, 0.3);
+}
+
+/* Placeholder animation */
+input[type="text"]::placeholder {
+  color: #999;
+  font-style: italic;
+  animation: movePlaceholder 6s linear infinite;
+}
+
+@keyframes movePlaceholder {
+  0% { transform: translateX(100%); opacity: 0; }
+  25% { transform: translateX(0%); opacity: 1; }
+  75% { transform: translateX(0%); opacity: 1; }
+  100% { transform: translateX(-100%); opacity: 0; }
+}
+
+/* Button styling */
+button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  background: linear-gradient(45deg, #2196F3, #21CBF3);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #1976d2, #21a1d3);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Error message */
+#errorMsg {
+  min-height: 24px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  color: #e53935;
+  font-weight: bold;
+}

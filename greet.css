@@ -1,0 +1,72 @@
+/* General body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Main container */
+.container {
+  background-color: #ffffffcc;
+  backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Header styling */
+h1#greeting {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+  animation: fadeInText 1.5s ease-in-out;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-bottom: 25px;
+  color: #555;
+  animation: fadeInText 2s ease-in-out;
+}
+
+/* Button styling */
+button#nextBtn {
+  padding: 12px 30px;
+  font-size: 1rem;
+  background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button#nextBtn:hover {
+  background: linear-gradient(45deg, #FF4E4E, #FF7A33);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Fade-in animation for text */
+@keyframes fadeInText {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
